@@ -1,0 +1,10 @@
+header_test: header_test.o, header.o
+	clang -o header_test header_test.o header.o
+
+header_test.o: header_test.c header.c
+	clang -c -Wall --pedantic-errors header_test.c
+
+header.o: header.c
+	clang -c -Wall --pedantic-errors header.c
+
+

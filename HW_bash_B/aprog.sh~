@@ -1,0 +1,3 @@
+#!/bin/bash
+STATUS=`./copy.sh`
+echo "$STATUS"

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+S1="oiuoiu"
+S2=" "
+
+if [ -n$S1 ] && [ -n$S2 ] ;then
+    if [ $Si==$S2] ;then
+       echo "Same"
+    fi
+else
+    echo "Not same"
+fi

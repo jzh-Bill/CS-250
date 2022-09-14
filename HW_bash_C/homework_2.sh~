@@ -1,0 +1,19 @@
+#!/bin/bash
+
+S1=""
+
+S2=""
+
+if [ -n $S1 ] && [ -n $S2 ];then
+
+    echo "They are letter"
+    
+   # if [ $S1 == $S2 ];then
+#	echo "Same"
+ #   else
+#	echo "Not same"
+  #  fi
+else
+    echo "They are empty"
+fi
+   

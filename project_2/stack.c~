@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAXSIZE 200
+ 
+
+
+typedef struct
+{
+    char Data[MAXSIZE];
+    int index_of_top;
+}stack;
+
+
+void initial_stack(stack *char_stack)
+{
+    char_stack->index_of_top = 0;
+}
+
+char push(stack *char_stack, char tem_char)
+{
+    if(char_stack->index_of_top == MAXSIZE - 1)
+    {
+        printf("The stack is fall!!!\n");
+        exit(-1);
+    }
+
+    char_stack->Data[(char_stack->index_of_top)] = tem_char;
+    (char_stack->index_of_top)++;
+    return tem_char;
+}
+
+char pop(stack *char_stack)
+{
+    if(char_stack->index_of_top == 0)
+    {
+        printf("The stack is totally empty\n");
+        exit(0);
+    }
+    char tem_char = char_stack->Data[char_stack->index_of_top];
+    char_stack->index_of_top--;
+    return tem_char;
+}
+int is_empty(stack char_stack)
+{
+    if(char_stack.index_of_top == 0)
+    {
+        printf("The whole stack is empty!!\n");
+        return 1;
+    }
+    else
+    {
+        printf("The stack is not empty!!!\n");
+        return -1;
+    }
+}
+
+int is_full(stack char_stack)
+{
+    if(char_stack.index_of_top == MAXSIZE - 1)
+    {
+        printf("The whole stack is totally full!!\n");
+        return 1;
+    }
+    else
+    {
+        printf("The stack is not full yet!!\n");
+        return -1;
+    }
+}

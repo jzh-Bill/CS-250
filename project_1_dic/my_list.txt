@@ -1,0 +1,13 @@
+a:b:1
+cc:dd:2
+eee:fff:3
+gggg:hhhh:4
+iiiii:kkkkk:5
+llllll:mmmmmm:6
+nnnnnnn:ooooooo:7
+pppppppp:qqqqqqqq:8
+rrrrrrrrr:sssssssss:9
+tttttttttt:uuuuuuuuuu:10
+vvvvvvvvvvv:wwwwwwwwww:11
+xxxxxxxxxxxx:yyyyyyyyyy:12
+zzzzzzzzzzzzz:00000000000:0

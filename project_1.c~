@@ -1,0 +1,164 @@
+#include <stdio.h>
+#define MAX_CLASS_NAME 16
+#define MAX_LOCATION_NAME 24
+#define MAX_CLASSES 100
+
+int main()
+{
+
+   typedef struct class_info
+    {
+        char class[MAX_CLASS_NAME];
+        char location[MAX_LOCATION_NAME];
+        unsigned int enrollment;
+    } class_info_t;
+
+    class_info_t class_list[MAX_CLASSES];
+    int n_classes = 0;
+
+    FILE *fp;
+
+    const int N = 50;
+
+    char str[N - 1];
+
+    char delims[] = {":\n"};
+
+    int index = 0;
+
+    if ( (fp = fopen("my_list.txt", "r")) == NULL )
+    {
+        printf("Fail to open file!");
+        exit(0);
+    }
+
+
+    unsigned length = 0;
+    while( fgets(str, N, fp) != NULL )
+    {
+        char tem_class_name[20];
+        strcpy(tem_class_name,strtok(str, delims));
+        strcpy(class_list[index].class,tem_class_name);
+
+        char tem_class_location[30];
+        strcpy(tem_class_location,strtok(NULL, delims));
+        strcpy(class_list[index].location,tem_class_location);
+
+        char tem_enrollment[10];
+        strcpy(tem_enrollment,strtok(NULL, delims));
+
+        sscanf(tem_enrollment,"%u", &class_list[index].enrollment);
+
+
+
+      // printf("%s %s %u \n",class_list[index].class, class_list[index].location, class_list[index].enrollment);
+
+        index++;
+        length++;
+    }
+
+
+ printf("Enter the name of the class:");
+
+ char tem_class_name[MAX_CLASS_NAME];
+
+ fgets(tem_class_name,MAX_CLASS_NAME,stdin);
+
+char  small_deli[] = {"\n"};
+char tem_class_name_2[20];
+
+ strcpy(tem_class_name_2,strtok(tem_class_name,small_deli ));
+
+ //   tem_class_name[MAX_CLASS_NAME - 1] = '\0';
+// printf("%s",tem_class_name );
+/*
+int y = 0;
+while(tem_class_name_2[y] != '\0')
+{
+    printf("%c|",tem_class_name_2[y]);
+
+    y++;
+
+}
+printf("%d",y);
+ int loop_counter = 0;
+
+ printf("\n");
+
+
+int r = 0;
+
+while(class_list[0].class[r] != '\0')
+{
+    printf("%c|",class_list[0].class[r]);
+    r++;
+}
+
+printf("%d",r);
+
+*/
+
+int loop_counter = 0;
+
+int cmp_result;
+
+
+ for(loop_counter; loop_counter < length; loop_counter++)
+ {
+     cmp_result = strcmp(class_list[loop_counter].class , tem_class_name_2);
+
+    if(cmp_result == 0)
+    {
+        printf("The class %s meets in %s with %u people.",tem_class_name_2,class_list[loop_counter].location, class_list[loop_counter].enrollment);
+    }
+
+ }
+  printf("Does not find");
+   return 0;
+}
+#include <stdio.h>
+#define MAX_CLASS_NAME 16 
+#define MAX_LOCATION_NAME 24
+#define MAX_CLASSES 100
+
+int main()
+{
+    typedef struct class_info
+    {
+        char class[MAX_CLASS_NAME];
+        char location[MAX_LOCATION_NAME];
+        unsigned int enrollment;
+    } class_info_t;
+    
+    class_info_t class_list[MAX_CLASSES];
+    int n_classes = 0;
+    
+    char tem_name[16];
+    char tem_location[24];
+    int tem_enrollment;
+    
+    FILE *fp;
+    
+    const int N = 50;
+    
+    char str[N - 1];
+    
+    char delims[] = {":\n"};
+    
+    int index = 0;
+    
+    if ( (fp = fopen(argu1", "r")) == NULL ) 
+    {
+        printf("Fail to open file!");
+        exit(0);
+    }
+
+    while( fgets(str, N, fp) != NULL ) 
+    {
+        strcopy( class_list[index].class, strtok(str, delims));
+        strcopy( class_list[index].location, strtok(NULL, delims));
+        strcopy( class_list[index].enrollment, strtok(NULL,delims));
+	
+    }
+    
+}

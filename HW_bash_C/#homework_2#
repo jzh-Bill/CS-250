@@ -1,0 +1,13 @@
+#!/bin/bash
+# GNU bash, version
+
+EXAM_GRADE="A"
+PROGRAMS_DONE="1"
+
+if [ $EXAM_GRADE == "A" ] && [ $PROGRAMS_DONE == "2" ];then
+    echo "The student's score is honor"
+fi
+
+if  ( [ $EXAM_GRADE == "A" ] && [ $PROGRAMS_DONE == "1" ] ) || ( [ $EXAM_GRADE == "B" ] && [ $PROGRAMS_DONE == "2" ] );then
+    echo "The student's score is satisfactory"
+fi
